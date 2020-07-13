@@ -16,7 +16,9 @@
     "db:migrate": "node lib/migrate.js",
     "db:up": "docker-compose up -d",
     "db:down": "docker-compose down",
-    "db:delete": "docker-compose down -v"
+    "db:delete": "docker-compose down -v",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@nearform/sql": "^1.4.0",
@@ -43,7 +45,8 @@
     "pg-range": "^1.1.0",
     "postgrator": "^3.11.0",
     "under-pressure": "^3.1.0",
-    "uuid": "^8.0.0"
+    "uuid": "^8.0.0",
+    "snyk": "^1.361.3"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
@@ -70,5 +73,6 @@
       "git add"
     ]
   },
-  "prettier": "prettier-config-standard"
+  "prettier": "prettier-config-standard",
+  "snyk": true
 }
